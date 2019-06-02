@@ -1,0 +1,3 @@
+./configure --with-stream --with-threads \
+    --without-http_fastcgi_module \
+    --with-http_ssl_module --with-http_v2_module
