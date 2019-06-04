@@ -12,8 +12,12 @@ using toolset::nginx::common::exception::NgxException;
 
 int main()
 {
-
+    ngx_time_init();
     DateTime dateTime = DateTime::get();
+    std::cout << dateTime.year() << "-" << dateTime.month() << "-" << dateTime.dayOfMonth()
+              << " " << dateTime.dayOfWeek()
+              << " " << dateTime.dayOfYear(true)
+              << std::endl;
     std::cout << dateTime.hours() << ":" << dateTime.minutes() << ":" << dateTime.seconds() << "." << dateTime.millisecond() << std::endl;
 
 
