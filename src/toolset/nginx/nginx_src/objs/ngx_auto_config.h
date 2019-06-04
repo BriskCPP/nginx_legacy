@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --with-threads --with-pcre --with-http_v2_module --with-http_realip_module --without-http_fastcgi_module --with-http_dav_module --with-http_ssl_module"
+#define NGX_CONFIGURE " --with-threads --with-pcre --with-http_v2_module --with-http_realip_module --without-http_fastcgi_module --with-http_dav_module --with-http_ssl_module --add-module=../module"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) "

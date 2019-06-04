@@ -5,4 +5,5 @@
     --without-http_fastcgi_module \
     --with-http_dav_module \
     --with-http_ssl_module \
+    --add-module=../module
     # --with-stream

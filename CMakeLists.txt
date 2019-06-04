@@ -31,14 +31,8 @@ list(FILTER NGXSRC_SRC_HTTP_MODULES EXCLUDE REGEX modules/ngx_http_stub_status_m
 list(FILTER NGXSRC_SRC_HTTP_MODULES EXCLUDE REGEX modules/ngx_http_xslt_filter_module.c$)
 
 
-
 #aux_source_directory(src/toolset/nginx/nginx_src/src/os/unix NGXSRC_SRC_OS_UNIX)
 FILE(GLOB NGXSRC_SRC_OS_UNIX src/toolset/nginx/nginx_src/src/os/unix/*.c)
-MESSAGE(${NGXSRC_SRC_OS_UNIX})
-
-LIST(LENGTH NGXSRC_SRC_OS_UNIX lengthBeforeFilter)
-MESSAGE(${lengthBeforeFilter})
-
 
 list(FILTER NGXSRC_SRC_OS_UNIX EXCLUDE REGEX darwin.*.c$)
 list(FILTER NGXSRC_SRC_OS_UNIX EXCLUDE REGEX freebsd.*.c$)
@@ -46,12 +40,6 @@ list(FILTER NGXSRC_SRC_OS_UNIX EXCLUDE REGEX solaris.*.c$)
 
 list(FILTER NGXSRC_SRC_OS_UNIX EXCLUDE REGEX /os/unix/ngx_file_aio_read.c$)
 list(FILTER NGXSRC_SRC_OS_UNIX EXCLUDE REGEX /os/unix/ngx_linux_aio_read.c$)
-
-
-MESSAGE(${NGXSRC_SRC_OS_UNIX})
-
-LIST(LENGTH NGXSRC_SRC_OS_UNIX lengthAfterFilter)
-MESSAGE(${lengthAfterFilter})
 
 
 aux_source_directory(src/toolset/nginx/nginx_src/objs NGXSRC_OBJS)
@@ -65,13 +53,11 @@ add_executable(NginxUtils_executable
                ${NGXSRC_SRC_HTTP_V2}
                ${NGXSRC_SRC_OS_UNIX}
                ${NGXSRC_OBJS}
-               main.cpp src/toolset/nginx/common/value/UnsetValue.hpp src/toolset/nginx/common/value/value.hpp src/toolset/nginx/common/exception/Exception.hpp src/toolset/nginx/common/exception/NgxException.hpp src/toolset/nginx/common/exception/NgxError.hpp src/toolset/nginx/nginx_src.h src/toolset/nginx/common/exception/NgxAgain.hpp src/toolset/nginx/common/exception/NgxBusy.hpp src/toolset/nginx/common/exception/NgxDone.hpp src/toolset/nginx/common/exception/NgxDeclined.hpp src/toolset/nginx/common/exception/NgxAbort.hpp src/toolset/nginx/common/exception/exception.h src/toolset/nginx/common/time/DateTime.hpp src/toolset/nginx/common/commons.h)
-# add_library(NginxUtils_staticLib main.cpp src/toolset/nginx/common/value/UnsetValue.hpp src/toolset/nginx/common/value/value.hpp src/toolset/nginx/common/exception/Exception.hpp src/toolset/nginx/common/exception/NgxException.hpp src/toolset/nginx/common/exception/NgxError.hpp src/toolset/nginx/nginx_src.h src/toolset/nginx/common/exception/NgxAgain.hpp src/toolset/nginx/common/exception/NgxBusy.hpp src/toolset/nginx/common/exception/NgxDone.hpp src/toolset/nginx/common/exception/NgxDeclined.hpp src/toolset/nginx/common/exception/NgxAbort.hpp src/toolset/nginx/common/exception/exception.h src/toolset/nginx/common/time/DateTime.hpp src/toolset/nginx/common/commons.h)
+               main.cpp src/toolset/nginx/common/value/UnsetValue.hpp src/toolset/nginx/common/value/value.hpp src/toolset/nginx/common/exception/Exception.hpp src/toolset/nginx/common/exception/NgxException.hpp src/toolset/nginx/common/exception/NgxError.hpp src/toolset/nginx/nginx_src.h src/toolset/nginx/common/exception/NgxAgain.hpp src/toolset/nginx/common/exception/NgxBusy.hpp src/toolset/nginx/common/exception/NgxDone.hpp src/toolset/nginx/common/exception/NgxDeclined.hpp src/toolset/nginx/common/exception/NgxAbort.hpp src/toolset/nginx/common/exception/exception.h src/toolset/nginx/common/time/DateTime.hpp src/toolset/nginx/common/commons.h src/toolset/nginx/common/log/NginxLog.hpp src/toolset/nginx/module/ngx_test_module.cpp)
 
 
 TARGET_LINK_LIBRARIES(NginxUtils_executable dl)
 TARGET_LINK_LIBRARIES(NginxUtils_executable m)
-
 TARGET_LINK_LIBRARIES(NginxUtils_executable pcre)
 TARGET_LINK_LIBRARIES(NginxUtils_executable pthread)
 TARGET_LINK_LIBRARIES(NginxUtils_executable crypt)

@@ -12,8 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30b8cd95-0ebb-4f1a-b728-a99ea2c2c0a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/toolset/nginx/common/log/NginxLog.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/toolset/nginx/module/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/autoconf.err" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/autoconf.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/ngx_auto_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/ngx_auto_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/ngx_modules.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/ngx_modules.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,19 +37,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src.h">
+        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="133">
+              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="-22">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -46,41 +57,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-389">
-              <caret line="123" column="25" lean-forward="true" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_time.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1042">
-              <caret line="223" column="15" selection-start-line="223" selection-start-column="15" selection-end-line="223" selection-end-column="15" />
+            <state relative-caret-position="475">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="47" />
               <folding>
-                <element signature="e#68#91#0" expanded="true" />
+                <element signature="e#122#140#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_times.c">
+        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="182">
+              <caret line="1025" selection-start-line="1025" selection-end-line="1025" />
             </state>
           </provider>
         </entry>
@@ -111,7 +104,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/nginx/common/value/UnsetValue.hpp" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/value/value.hpp" />
-        <option value="$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/exception/Exception.cpp" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/exception/Exception.h" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/exception/Exception.hpp" />
@@ -128,18 +120,26 @@
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_darwin_sendfile_chain.c" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_connection.h" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_connection.c" />
-        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_dlopen.h" />
-        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src.h" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/modules/ngx_devpoll_module.c" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/ngx_event.h" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/options" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/modules/ngx_http_degradation_module.c" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/Makefile" />
-        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/common/log/Log.hpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/common/log/NginxLog.hpp" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_request.h" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src.h" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.h" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.hpp" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/module/config" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" />
       </list>
     </option>
   </component>
@@ -187,7 +187,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="toolset" type="462c0819:PsiDirectoryNode" />
               <item name="nginx" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NginxUtils_executable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NginxUtils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="toolset" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="value" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NginxUtils_executable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NginxUtils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="toolset" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NginxUtils_executable" type="b2602c69:ProjectViewProjectNode" />
@@ -196,7 +213,6 @@
               <item name="toolset" type="462c0819:PsiDirectoryNode" />
               <item name="nginx" type="462c0819:PsiDirectoryNode" />
               <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NginxUtils_executable" type="b2602c69:ProjectViewProjectNode" />
@@ -253,11 +269,12 @@
       <workItem from="1559488953642" duration="8840000" />
       <workItem from="1559573117017" duration="18779000" />
       <workItem from="1559617890776" duration="11895000" />
+      <workItem from="1559647366623" duration="16207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50840000" />
+    <option name="totallyTimeSpent" value="67047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,9 +286,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1599" height="883" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20051579" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17451523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -282,7 +299,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32934928" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49913195" weight="0.43160692" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49913195" visible="true" weight="0.35135135" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32934928" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008681" side_tool="true" weight="0.32802126" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32934928" />
@@ -297,185 +314,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/make">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/sources">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/init">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/os/conf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/unix">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5805" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/include">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/Makefile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_readv_chain.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/ngx_event.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/modules/ngx_epoll_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="201" column="30" selection-start-line="201" selection-start-column="14" selection-end-line="201" selection-end-column="30" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-            <element signature="e#167#1768#0" expanded="true" />
-            <element signature="e#3291#3475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/configure">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/include/x86_64-linux-gnu/sys/poll.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/ngx_event.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#3027#3597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/modules/ngx_devpoll_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="352" selection-start-line="352" selection-end-line="352" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-            <element signature="e#169#415#0" expanded="true" />
-            <element signature="e#5949#6002#0" expanded="true" />
-            <element signature="e#6449#6502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/modules/ngx_eventport_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-            <element signature="e#171#2702#0" expanded="true" />
-            <element signature="e#8409#8425#0" expanded="true" />
-            <element signature="e#8532#8549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/event/modules/ngx_kqueue_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_user.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/crypt.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/ngx_auto_config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="391" column="8" selection-start-line="391" selection-start-column="8" selection-end-line="391" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_copy_filter_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="e#826#857#0" expanded="true" />
-            <element signature="e#1246#1278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_hash.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/modules/ngx_http_degradation_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/modules/ngx_http_geo_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding>
-            <element signature="e#68#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/modules/ngx_http_geoip_module.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -523,16 +361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_request.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="216" column="20" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="20" />
-          <folding>
-            <element signature="e#7053#7097#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -602,29 +430,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_time.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#410#593#0" expanded="true" />
-            <element signature="e#633#667#0" expanded="true" />
-            <element signature="e#1027#1102#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1121">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -635,43 +444,241 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_errno.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_log.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/log/NginxLog.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+          <folding>
+            <element signature="e#594#612#0" expanded="true" />
+            <element signature="e#1020#1039#0" expanded="true" />
+            <element signature="e#1446#1465#0" expanded="true" />
+            <element signature="e#1888#1907#0" expanded="true" />
+            <element signature="e#2312#2331#0" expanded="true" />
+            <element signature="e#2731#2750#0" expanded="true" />
+            <element signature="e#3156#3175#0" expanded="true" />
+            <element signature="e#3579#3598#0" expanded="true" />
+            <element signature="e#4003#4022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_palloc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#134#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_cache.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_palloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="297" selection-start-line="297" selection-end-line="297" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="125">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#5546#5598#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_array.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/README">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/configure">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1917" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/auto/modules">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/conf/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_request.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="366" column="20" selection-start-line="366" selection-start-column="20" selection-end-line="366" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_array.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1042">
-          <caret line="223" column="15" selection-start-line="223" selection-start-column="15" selection-end-line="223" selection-end-column="15" />
+        <state relative-caret-position="223">
+          <caret line="190" column="11" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
           <folding>
             <element signature="e#68#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/os/unix/ngx_time.c">
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_core_module.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="191">
+          <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
+          <folding>
+            <element signature="e#140#163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/time/DateTime.hpp">
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_config.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="123" column="25" lean-forward="true" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+        <state relative-caret-position="-782">
+          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+          <folding>
+            <element signature="e#410#593#0" expanded="true" />
+            <element signature="e#633#667#0" expanded="true" />
+            <element signature="e#1027#1102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/value/value.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="e#970#982#0" expanded="true" />
+            <element signature="e#1146#1158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/ngx_http_config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="34" column="74" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="74" />
+          <folding>
+            <element signature="e#144#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="1025" selection-start-line="1025" selection-end-line="1025" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_core.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="-22">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="e#122#140#0" expanded="true" />
           </folding>
         </state>
       </provider>
