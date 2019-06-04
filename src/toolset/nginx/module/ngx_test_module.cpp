@@ -23,13 +23,61 @@ struct ModuleConfig final
 };
 
 
+char *ngx_conf_set_flag_slot_1(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
+{
+    char *p = reinterpret_cast<char *>(conf);
+
+    ngx_str_t *value;
+    ngx_flag_t *fp;
+    ngx_conf_post_t *post;
+
+    fp = (ngx_flag_t *) (p + cmd->offset);
+
+    //if (*fp != NGX_CONF_UNSET)
+    //{
+    //    return "is duplicate";
+    //}
+
+    value = reinterpret_cast<ngx_str_t *>(cf->args->elts);
+
+    if (ngx_strcasecmp(value[1].data, (u_char *) "on") == 0)
+    {
+        *fp = 1;
+
+    }
+    else if (ngx_strcasecmp(value[1].data, (u_char *) "off") == 0)
+    {
+        *fp = 0;
+
+    }
+    else
+    {
+        ngx_conf_log_error(
+                NGX_LOG_EMERG, cf, 0,
+                "invalid value \"%s\" in \"%s\" directive, "
+                "it must be \"on\" or \"off\"",
+                value[1].data, cmd->name.data
+        );
+        return reinterpret_cast<char *>(NGX_CONF_ERROR);
+    }
+
+    if (cmd->post)
+    {
+        post = reinterpret_cast<ngx_conf_post_t *>(cmd->post);
+        return post->post_handler(cf, post, fp);
+    }
+
+    return NGX_CONF_OK;
+}
+
+
 //静态变量  全局只有一份
 static ngx_command_t moduleCommands[] =
         {
                 {
                         ngx_string("test_switch"),//在配置文件中指令的名称
                         NGX_HTTP_LOC_CONF | NGX_CONF_FLAG,//指令的作用域和类型
-                        ngx_conf_set_flag_slot,//解析用的函数指针
+                        ngx_conf_set_flag_slot_1,//解析用的函数指针
                         NGX_HTTP_LOC_CONF_OFFSET,//数据的存储位置类型
                         offsetof(ModuleConfig, enabled), //具体的偏移量
                         nullptr//暂时不用关心

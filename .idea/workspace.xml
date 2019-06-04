@@ -13,12 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30b8cd95-0ebb-4f1a-b728-a99ea2c2c0a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/autoconf.err" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/autoconf.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/nginx" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/nginx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,23 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-              <folding>
-                <element signature="e#653#673#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="835">
+              <caret line="1061" column="1" lean-forward="true" selection-start-line="1024" selection-end-line="1061" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+            <state relative-caret-position="287">
+              <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
               <folding>
                 <element signature="e#122#140#0" expanded="true" />
               </folding>
@@ -139,10 +134,10 @@
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/myconfigure" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/module/config" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/value/UnsetValue.hpp" />
-        <option value="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/nginx.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp" />
+        <option value="$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp" />
       </list>
     </option>
   </component>
@@ -227,34 +222,6 @@
               <item name="nginx" type="462c0819:PsiDirectoryNode" />
               <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NginxWorkbench_executable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NginxUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="toolset" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
-              <item name="objs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NginxWorkbench_executable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NginxUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="toolset" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NginxWorkbench_executable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NginxUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="toolset" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx_src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -315,12 +282,12 @@
       <workItem from="1559573117017" duration="18779000" />
       <workItem from="1559617890776" duration="11895000" />
       <workItem from="1559647366623" duration="16207000" />
-      <workItem from="1559669053906" duration="4743000" />
+      <workItem from="1559669053906" duration="6028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71790000" />
+    <option name="totallyTimeSpent" value="73075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +302,7 @@
     <frame x="67" y="25" width="1599" height="883" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23597679" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23597679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -346,7 +313,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32934928" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.49913195" visible="true" weight="0.3625498" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49913195" visible="true" weight="0.3625498" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32934928" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008681" side_tool="true" weight="0.32802126" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32934928" />
@@ -361,13 +328,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/modules/ngx_http_dav_module.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/http/v2/ngx_http_v2.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225" />
@@ -640,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="1025" column="31" selection-start-line="1025" selection-start-column="31" selection-end-line="1025" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_core.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -709,16 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
-          <folding>
-            <element signature="e#122#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -733,12 +676,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/objs/autoconf.err">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/toolset/nginx/common/exception/NgxException.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="152">
           <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="e#653#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/nginx_src/src/core/ngx_conf_file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="1061" column="1" lean-forward="true" selection-start-line="1024" selection-end-line="1061" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolset/nginx/module/ngx_test_module.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+          <folding>
+            <element signature="e#122#140#0" expanded="true" />
           </folding>
         </state>
       </provider>
