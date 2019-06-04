@@ -15,8 +15,7 @@ ALL_INCS = -I src/core \
 	-I objs \
 	-I src/http \
 	-I src/http/modules \
-	-I src/http/v2 \
-	-I src/stream
+	-I src/http/v2
 
 
 CORE_DEPS = src/core/nginx.h \
@@ -111,16 +110,6 @@ HTTP_INCS = -I src/http \
 	-I src/http/v2
 
 
-STREAM_DEPS = src/stream/ngx_stream.h \
-	src/stream/ngx_stream_variables.h \
-	src/stream/ngx_stream_script.h \
-	src/stream/ngx_stream_upstream.h \
-	src/stream/ngx_stream_upstream_round_robin.h
-
-
-STREAM_INCS = -I src/stream
-
-
 build:	binary modules manpage
 
 binary:	objs/nginx
@@ -196,6 +185,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/os/unix/ngx_thread_cond.o \
 	objs/src/os/unix/ngx_thread_mutex.o \
 	objs/src/os/unix/ngx_thread_id.o \
+	objs/src/event/modules/ngx_devpoll_module.o \
+	objs/src/event/modules/ngx_eventport_module.o \
 	objs/src/event/ngx_event_openssl.o \
 	objs/src/event/ngx_event_openssl_stapling.o \
 	objs/src/core/ngx_regex.o \
@@ -231,6 +222,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/v2/ngx_http_v2_huff_encode.o \
 	objs/src/http/v2/ngx_http_v2_module.o \
 	objs/src/http/modules/ngx_http_static_module.o \
+	objs/src/http/modules/ngx_http_dav_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_index_module.o \
 	objs/src/http/modules/ngx_http_mirror_module.o \
@@ -239,6 +231,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_access_module.o \
 	objs/src/http/modules/ngx_http_limit_conn_module.o \
 	objs/src/http/modules/ngx_http_limit_req_module.o \
+	objs/src/http/modules/ngx_http_realip_module.o \
 	objs/src/http/modules/ngx_http_geo_module.o \
 	objs/src/http/modules/ngx_http_map_module.o \
 	objs/src/http/modules/ngx_http_split_clients_module.o \
@@ -258,26 +251,6 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_random_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
 	objs/src/http/modules/ngx_http_upstream_zone_module.o \
-	objs/src/stream/ngx_stream.o \
-	objs/src/stream/ngx_stream_variables.o \
-	objs/src/stream/ngx_stream_script.o \
-	objs/src/stream/ngx_stream_handler.o \
-	objs/src/stream/ngx_stream_core_module.o \
-	objs/src/stream/ngx_stream_log_module.o \
-	objs/src/stream/ngx_stream_proxy_module.o \
-	objs/src/stream/ngx_stream_upstream.o \
-	objs/src/stream/ngx_stream_upstream_round_robin.o \
-	objs/src/stream/ngx_stream_write_filter_module.o \
-	objs/src/stream/ngx_stream_limit_conn_module.o \
-	objs/src/stream/ngx_stream_access_module.o \
-	objs/src/stream/ngx_stream_geo_module.o \
-	objs/src/stream/ngx_stream_map_module.o \
-	objs/src/stream/ngx_stream_split_clients_module.o \
-	objs/src/stream/ngx_stream_return_module.o \
-	objs/src/stream/ngx_stream_upstream_hash_module.o \
-	objs/src/stream/ngx_stream_upstream_least_conn_module.o \
-	objs/src/stream/ngx_stream_upstream_random_module.o \
-	objs/src/stream/ngx_stream_upstream_zone_module.o \
 	objs/ngx_modules.o
 
 	$(LINK) -o objs/nginx \
@@ -352,6 +325,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/os/unix/ngx_thread_cond.o \
 	objs/src/os/unix/ngx_thread_mutex.o \
 	objs/src/os/unix/ngx_thread_id.o \
+	objs/src/event/modules/ngx_devpoll_module.o \
+	objs/src/event/modules/ngx_eventport_module.o \
 	objs/src/event/ngx_event_openssl.o \
 	objs/src/event/ngx_event_openssl_stapling.o \
 	objs/src/core/ngx_regex.o \
@@ -387,6 +362,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/v2/ngx_http_v2_huff_encode.o \
 	objs/src/http/v2/ngx_http_v2_module.o \
 	objs/src/http/modules/ngx_http_static_module.o \
+	objs/src/http/modules/ngx_http_dav_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_index_module.o \
 	objs/src/http/modules/ngx_http_mirror_module.o \
@@ -395,6 +371,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_access_module.o \
 	objs/src/http/modules/ngx_http_limit_conn_module.o \
 	objs/src/http/modules/ngx_http_limit_req_module.o \
+	objs/src/http/modules/ngx_http_realip_module.o \
 	objs/src/http/modules/ngx_http_geo_module.o \
 	objs/src/http/modules/ngx_http_map_module.o \
 	objs/src/http/modules/ngx_http_split_clients_module.o \
@@ -414,26 +391,6 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_random_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
 	objs/src/http/modules/ngx_http_upstream_zone_module.o \
-	objs/src/stream/ngx_stream.o \
-	objs/src/stream/ngx_stream_variables.o \
-	objs/src/stream/ngx_stream_script.o \
-	objs/src/stream/ngx_stream_handler.o \
-	objs/src/stream/ngx_stream_core_module.o \
-	objs/src/stream/ngx_stream_log_module.o \
-	objs/src/stream/ngx_stream_proxy_module.o \
-	objs/src/stream/ngx_stream_upstream.o \
-	objs/src/stream/ngx_stream_upstream_round_robin.o \
-	objs/src/stream/ngx_stream_write_filter_module.o \
-	objs/src/stream/ngx_stream_limit_conn_module.o \
-	objs/src/stream/ngx_stream_access_module.o \
-	objs/src/stream/ngx_stream_geo_module.o \
-	objs/src/stream/ngx_stream_map_module.o \
-	objs/src/stream/ngx_stream_split_clients_module.o \
-	objs/src/stream/ngx_stream_return_module.o \
-	objs/src/stream/ngx_stream_upstream_hash_module.o \
-	objs/src/stream/ngx_stream_upstream_least_conn_module.o \
-	objs/src/stream/ngx_stream_upstream_random_module.o \
-	objs/src/stream/ngx_stream_upstream_zone_module.o \
 	objs/ngx_modules.o \
 	-ldl -lpthread -lpthread -lcrypt -lpcre -lssl -lcrypto -ldl -lpthread -lz \
 	-Wl,-E
@@ -946,6 +903,20 @@ objs/src/os/unix/ngx_thread_id.o:	$(CORE_DEPS) \
 		src/os/unix/ngx_thread_id.c
 
 
+objs/src/event/modules/ngx_devpoll_module.o:	$(CORE_DEPS) \
+	src/event/modules/ngx_devpoll_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) \
+		-o objs/src/event/modules/ngx_devpoll_module.o \
+		src/event/modules/ngx_devpoll_module.c
+
+
+objs/src/event/modules/ngx_eventport_module.o:	$(CORE_DEPS) \
+	src/event/modules/ngx_eventport_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) \
+		-o objs/src/event/modules/ngx_eventport_module.o \
+		src/event/modules/ngx_eventport_module.c
+
+
 objs/src/event/ngx_event_openssl.o:	$(CORE_DEPS) \
 	src/event/ngx_event_openssl.c
 	$(CC) -c $(CFLAGS) $(CORE_INCS) \
@@ -1191,6 +1162,13 @@ objs/src/http/modules/ngx_http_static_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 		src/http/modules/ngx_http_static_module.c
 
 
+objs/src/http/modules/ngx_http_dav_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_dav_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_dav_module.o \
+		src/http/modules/ngx_http_dav_module.c
+
+
 objs/src/http/modules/ngx_http_autoindex_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 	src/http/modules/ngx_http_autoindex_module.c
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
@@ -1245,6 +1223,13 @@ objs/src/http/modules/ngx_http_limit_req_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_limit_req_module.o \
 		src/http/modules/ngx_http_limit_req_module.c
+
+
+objs/src/http/modules/ngx_http_realip_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_realip_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_realip_module.o \
+		src/http/modules/ngx_http_realip_module.c
 
 
 objs/src/http/modules/ngx_http_geo_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
@@ -1378,146 +1363,6 @@ objs/src/http/modules/ngx_http_upstream_zone_module.o:	$(CORE_DEPS) $(HTTP_DEPS)
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_upstream_zone_module.o \
 		src/http/modules/ngx_http_upstream_zone_module.c
-
-
-objs/src/stream/ngx_stream.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream.o \
-		src/stream/ngx_stream.c
-
-
-objs/src/stream/ngx_stream_variables.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_variables.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_variables.o \
-		src/stream/ngx_stream_variables.c
-
-
-objs/src/stream/ngx_stream_script.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_script.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_script.o \
-		src/stream/ngx_stream_script.c
-
-
-objs/src/stream/ngx_stream_handler.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_handler.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_handler.o \
-		src/stream/ngx_stream_handler.c
-
-
-objs/src/stream/ngx_stream_core_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_core_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_core_module.o \
-		src/stream/ngx_stream_core_module.c
-
-
-objs/src/stream/ngx_stream_log_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_log_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_log_module.o \
-		src/stream/ngx_stream_log_module.c
-
-
-objs/src/stream/ngx_stream_proxy_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_proxy_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_proxy_module.o \
-		src/stream/ngx_stream_proxy_module.c
-
-
-objs/src/stream/ngx_stream_upstream.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream.o \
-		src/stream/ngx_stream_upstream.c
-
-
-objs/src/stream/ngx_stream_upstream_round_robin.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream_round_robin.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream_round_robin.o \
-		src/stream/ngx_stream_upstream_round_robin.c
-
-
-objs/src/stream/ngx_stream_write_filter_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_write_filter_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_write_filter_module.o \
-		src/stream/ngx_stream_write_filter_module.c
-
-
-objs/src/stream/ngx_stream_limit_conn_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_limit_conn_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_limit_conn_module.o \
-		src/stream/ngx_stream_limit_conn_module.c
-
-
-objs/src/stream/ngx_stream_access_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_access_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_access_module.o \
-		src/stream/ngx_stream_access_module.c
-
-
-objs/src/stream/ngx_stream_geo_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_geo_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_geo_module.o \
-		src/stream/ngx_stream_geo_module.c
-
-
-objs/src/stream/ngx_stream_map_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_map_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_map_module.o \
-		src/stream/ngx_stream_map_module.c
-
-
-objs/src/stream/ngx_stream_split_clients_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_split_clients_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_split_clients_module.o \
-		src/stream/ngx_stream_split_clients_module.c
-
-
-objs/src/stream/ngx_stream_return_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_return_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_return_module.o \
-		src/stream/ngx_stream_return_module.c
-
-
-objs/src/stream/ngx_stream_upstream_hash_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream_hash_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream_hash_module.o \
-		src/stream/ngx_stream_upstream_hash_module.c
-
-
-objs/src/stream/ngx_stream_upstream_least_conn_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream_least_conn_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream_least_conn_module.o \
-		src/stream/ngx_stream_upstream_least_conn_module.c
-
-
-objs/src/stream/ngx_stream_upstream_random_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream_random_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream_random_module.o \
-		src/stream/ngx_stream_upstream_random_module.c
-
-
-objs/src/stream/ngx_stream_upstream_zone_module.o:	$(CORE_DEPS) $(STREAM_DEPS) \
-	src/stream/ngx_stream_upstream_zone_module.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) $(STREAM_INCS) \
-		-o objs/src/stream/ngx_stream_upstream_zone_module.o \
-		src/stream/ngx_stream_upstream_zone_module.c
 
 
 manpage:	objs/nginx.8

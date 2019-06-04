@@ -1,17 +1,20 @@
 #include <iostream>
 
-#include "src/toolset/nginx/common/value/value.hpp"
-#include "src/toolset/nginx/common/exception/exception.h"
+#include "src/toolset/nginx/common/commons.h"
 
 #include <typeinfo>
 
 #include <cstdio>
 
+using toolset::nginx::common::time::DateTime;
 using toolset::nginx::common::value::UnsetValue;
 using toolset::nginx::common::exception::NgxException;
 
 int main()
 {
+
+    DateTime dateTime = DateTime::get();
+    std::cout << dateTime.hours() << ":" << dateTime.minutes() << ":" << dateTime.seconds() << "." << dateTime.millisecond() << std::endl;
 
 
     const NgxException ngxException = NgxException(-2);

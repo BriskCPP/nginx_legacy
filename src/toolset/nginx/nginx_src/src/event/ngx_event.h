@@ -11,7 +11,7 @@
 
 #include <ngx_config.h>
 #include <ngx_core.h>
-
+#include <poll.h>
 
 #define NGX_INVALID_INDEX  0xd0d0d0d0
 

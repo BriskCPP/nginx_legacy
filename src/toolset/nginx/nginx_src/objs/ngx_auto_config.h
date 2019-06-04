@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --with-stream --with-threads --without-http_fastcgi_module --with-http_ssl_module --with-http_v2_module"
+#define NGX_CONFIGURE " --with-threads --with-pcre --with-http_v2_module --with-http_realip_module --without-http_fastcgi_module --with-http_dav_module --with-http_ssl_module"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) "
@@ -358,6 +358,26 @@
 #endif
 
 
+#ifndef NGX_HAVE_DEVPOLL
+#define NGX_HAVE_DEVPOLL  1
+#endif
+
+
+#ifndef NGX_TEST_BUILD_DEVPOLL
+#define NGX_TEST_BUILD_DEVPOLL  1
+#endif
+
+
+#ifndef NGX_HAVE_EVENTPORT
+#define NGX_HAVE_EVENTPORT  1
+#endif
+
+
+#ifndef NGX_TEST_BUILD_EVENTPORT
+#define NGX_TEST_BUILD_EVENTPORT  1
+#endif
+
+
 #ifndef NGX_HTTP_CACHE
 #define NGX_HTTP_CACHE  1
 #endif
@@ -383,8 +403,23 @@
 #endif
 
 
+#ifndef NGX_HTTP_DAV
+#define NGX_HTTP_DAV  1
+#endif
+
+
 #ifndef NGX_CRYPT
 #define NGX_CRYPT  1
+#endif
+
+
+#ifndef NGX_HTTP_REALIP
+#define NGX_HTTP_REALIP  1
+#endif
+
+
+#ifndef NGX_HTTP_X_FORWARDED_FOR
+#define NGX_HTTP_X_FORWARDED_FOR  1
 #endif
 
 
@@ -405,11 +440,6 @@
 
 #ifndef NGX_HTTP_UPSTREAM_ZONE
 #define NGX_HTTP_UPSTREAM_ZONE  1
-#endif
-
-
-#ifndef NGX_STREAM_UPSTREAM_ZONE
-#define NGX_STREAM_UPSTREAM_ZONE  1
 #endif
 
 
