@@ -190,7 +190,7 @@ static char        *ngx_signal;
 
 static char **ngx_os_environ;
 
-
+#ifndef NGINX_WORKBENCH
 int ngx_cdecl
 main(int argc, char *const *argv)
 {
@@ -384,7 +384,7 @@ main(int argc, char *const *argv)
 
     return 0;
 }
-
+#endif
 
 static void
 ngx_show_version_info(void)

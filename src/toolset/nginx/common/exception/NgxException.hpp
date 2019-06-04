@@ -26,12 +26,18 @@ namespace toolset
                 {
 
                 public:
-                    explicit NgxException(ngx_int_t errorCode);
+                    inline explicit NgxException(ngx_int_t errorCode) :
+                            Exception(
+                                    static_cast<int>(errorCode),
+                                    std::string("Nginx Error:") + std::to_string(errorCode)
+                            )
+                    {
+                    }
 
-                    const NgxException &explicitType() const noexcept;
+                    inline const NgxException &explicitType() const noexcept;
 
                     template<class ExplicitType>
-                    bool isType() const noexcept
+                    inline bool isType() const noexcept
                     {
                         try
                         {
@@ -116,14 +122,6 @@ namespace toolset
                     }
                 };
 
-
-                NgxException::NgxException(ngx_int_t errorCode) :
-                        Exception(
-                                static_cast<int>(errorCode),
-                                std::string("Nginx Error:") + std::to_string(errorCode)
-                        )
-                {
-                }
 
                 const NgxException &NgxException::explicitType() const noexcept
                 {

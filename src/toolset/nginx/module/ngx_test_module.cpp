@@ -74,20 +74,6 @@ void *create(ngx_conf_t *config)
     return p;
 }
 
-char *merge(ngx_conf_t *, void *prev, void *conf)
-{
-    if (reinterpret_cast<ModuleConfig *>(prev)->enabled == NGX_CONF_UNSET)
-    {
-        reinterpret_cast<ModuleConfig *>(conf)->enabled = 1;
-    }
-    else
-    {
-        reinterpret_cast<ModuleConfig *>(conf)->enabled =
-                reinterpret_cast<ModuleConfig *>(prev)->enabled;
-    }
-    return NGX_CONF_OK;
-}
-
 
 static ngx_http_module_t ngxHttpModule =
         {
@@ -98,22 +84,22 @@ static ngx_http_module_t ngxHttpModule =
                 nullptr,    /**create_srv_conf 创建server域的配置结构*/
                 nullptr,    /**merge_srv_conf 合并server域的配置结构*/
                 create,     /**create_loc_conf 创建location域的配置结构*/
-                merge       /**merge_loc_conf 合并location域的配置结构*/
+                nullptr     /**merge_loc_conf 合并location域的配置结构*/
         };
 
 ngx_module_t ngxTestModule =
         {
-                NGX_MODULE_V1,
-                &ngxHttpModule,
-                moduleCommands,
+                NGX_MODULE_V1,  //标准格式
+                &ngxHttpModule, //http_module
+                moduleCommands, //指令数组
                 NGX_HTTP_MODULE, //表明该模块是HTTP模块的TAG
-                nullptr,
-                nullptr,
-                nullptr,
-                nullptr,
-                nullptr,
-                nullptr,
-                nullptr,
+                nullptr,    //init master
+                nullptr,    //init module
+                nullptr,    //init process
+                nullptr,    //init thread
+                nullptr,    //exit thread
+                nullptr,    //exit process
+                nullptr,    //exit master
                 NGX_MODULE_V1_PADDING//标准填充宏
         };
 
